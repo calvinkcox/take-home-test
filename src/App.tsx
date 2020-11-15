@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import Layout from "./components/Layout";
+import ChatRoom from "./components/ChatRoom";
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Switch>
           <Route exact path={"/rooms/:roomId"}>
             <Layout>
-              <div>chat messages...</div>
+              <ChatRoom />
             </Layout>
           </Route>
           <Route exact path="/">

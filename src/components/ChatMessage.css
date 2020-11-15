@@ -1,0 +1,14 @@
+.chat-message {
+    padding-bottom: 30px;
+}
+
+.chat-message .row {
+    padding-bottom: 10px;
+}
+
+img.avatar {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    padding-right: 10px;
+}
