@@ -5,7 +5,7 @@ interface Props { }
 
 const Reply: FC<Props> = () => {
   return (
-    <div className="reply row">
+    <div className="reply row" data-testid="reply">
       <label htmlFor="reply-message" className="sr-only">Reply</label>
       <textarea id="reply-message" name="reply-message" />
       <button>Send Message</button>
