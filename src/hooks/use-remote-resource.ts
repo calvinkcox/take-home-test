@@ -1,23 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function useRemoteResource<D>(fn: () => Promise<D>, init: D) {
-  let didCancel = false;
+type ErrorState = Error | undefined;
+
+function useRemoteResource<D>(fn: () => Promise<D>, init: D): [ErrorState, boolean, D] {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState();
   const [data, setData] = useState(init);
 
-  (async () => {
-    const data = await fn();
-    if (!didCancel) {
-      setData(data);
-      setIsLoading(false);
-      setError(undefined);
-    }
-  })();
+  useEffect(() => {
+    let didCancel = false;
 
-  return () => {
-    didCancel = true;
-  }
+    (async () => {
+      const data = await fn();
+      if (!didCancel) {
+        setData(data);
+        setIsLoading(false);
+        setError(undefined);
+      }
+    })();
+
+    return () => {
+      didCancel = true;
+    }
+  });
+
+  return [error, isLoading, data];
 }
 
 export default useRemoteResource;
