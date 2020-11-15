@@ -1,0 +1,12 @@
+.layout {
+    margin: 10px;
+}
+
+.layout aside {
+    padding: 0 10px 10px 0;
+    border-right: 1px solid black;
+}
+
+.layout .content {
+    padding: 0 0 10px 10px;
+}

@@ -1,12 +1,13 @@
 import React, { FC } from "react";
 import Reply from "./Reply";
 import Navigation from "./Navigation";
+import "./Layout.css";
 
 interface Props { }
 
 const Layout: FC<Props> = () => {
   return (
-    <div className="layout">
+    <div className="layout row">
       <aside>
         <Navigation />
       </aside>
