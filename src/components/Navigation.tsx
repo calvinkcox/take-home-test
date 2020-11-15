@@ -2,6 +2,7 @@ import React, { FC, useCallback } from "react";
 import useRemoteResource from "../hooks/use-remote-resource";
 import { Room } from "../models/domain-objects";
 import NavLink from "./NavLink";
+import "./Navigation.css";
 
 const emptyRooms = [] as Room[];
 
@@ -17,7 +18,7 @@ const Navigation: FC<Props> = () => {
   if (isLoading) return <div>Loading chat rooms...</div>
 
   return (
-    <ul>
+    <ul className="navigation">
       {rooms.map((r) => (
         <NavLink roomId={r.roomId} name={r.name} />
       ))}
