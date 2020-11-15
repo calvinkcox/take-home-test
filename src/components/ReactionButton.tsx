@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Reaction } from "../models/domain-objects";
+import "./ReactionButton.css";
 
 interface Props extends Reaction { }
 

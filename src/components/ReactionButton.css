@@ -1,0 +1,12 @@
+.reaction-button {
+    margin-right: 10px;
+}
+
+.reaction-button:last-child {
+    margin-right: 0;
+}
+
+.reaction-button span.count {
+    padding-left: 5px;
+    font-size: smaller;
+}
