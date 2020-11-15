@@ -1,0 +1,11 @@
+{
+  "rooms": [{
+    "id": "3e6235eb-d986-49a6-8ea9-e6eca1af6e9e",
+    "roomId": "8e0e938c-5879-44ef-a787-2e38982e8e2c",
+    "name": "Pre-offer"
+  }],
+  "message-rooms": [{
+    "id": "8e0e938c-5879-44ef-a787-2e38982e8e2c",
+    "messages": [{"id":"5B01AE89-5140-4FA9-8BF1-F678B1A1B0ED","name":"Walter White","message":"Happy Thanksgiving everyone! Enjoy the long weekend","reactions":[{"count":5,"emoji":"👍"},{"count":10,"emoji":"♥️"}],"avatar_url":"https://www.divvyhomes.com/images/marketing/agent-derek.jpg"},{"id":"4DBAED27-91B8-49B4-ADBB-8D54843D30F6","name":"Gus Fring","message":"Because we had such a great quarter, everyone take Friday off as well.","reactions":[{"count":21,"emoji":"🚀"},{"count":9,"emoji":"🥓"},{"count":12,"emoji":"💃"},{"count":3,"emoji":"🙀"}],"avatar_url":"https://www.divvyhomes.com/images/marketing/agent-natalie.jpg"},{"id":"F9A42E42-ED5C-4B8A-BB5B-BDD61B1B48AF","name":"Adena Hefets","message":"Thanks so much ♥️","reactions":[],"avatar_url":"https://www.divvyhomes.com/images/marketing/adena.jpg"}]
+  }]
+}
