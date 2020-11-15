@@ -15,7 +15,7 @@ function App() {
             </Layout>
           </Route>
           <Route exact path="/">
-            <Layout>
+            <Layout isChatRoom={false}>
               <div>
                 Select a chat room to view chats.
               </div>

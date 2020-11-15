@@ -3,17 +3,19 @@ import Reply from "./Reply";
 import Navigation from "./Navigation";
 import "./Layout.css";
 
-interface Props { }
+interface Props {
+  isChatRoom?: boolean;
+}
 
-const Layout: FC<Props> = ({ children }) => {
+const Layout: FC<Props> = ({ isChatRoom = true, children }) => {
   return (
     <div className="layout row">
       <aside>
         <Navigation />
       </aside>
       <section className="content">
-        {children}
-        <Reply />
+        { children }
+        { isChatRoom && <Reply /> }
       </section>
     </div>
   )
