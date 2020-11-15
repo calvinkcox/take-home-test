@@ -5,14 +5,14 @@ import "./Layout.css";
 
 interface Props { }
 
-const Layout: FC<Props> = () => {
+const Layout: FC<Props> = ({ children }) => {
   return (
     <div className="layout row">
       <aside>
         <Navigation />
       </aside>
       <section className="content">
-        <div>Put chat messages here...</div>
+        {children}
         <Reply />
       </section>
     </div>
