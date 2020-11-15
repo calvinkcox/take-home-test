@@ -1,3 +1,32 @@
+# Divvy Teams UI
+
+I've added a few testing libraries, a mock server, and other things on top of CRA for this example app.
+The mock server will start automatically with `yarn start` so you shouldn't need to worry.
+
+In `/src/components/ChatRoom.tsx` you will find code to switch to the Divvvy mock API:
+```
+// switch to this for the local version with multiple chat rooms
+return fetch(`/message-rooms/${roomId}`)
+  .then((res) => res.json())
+  .then(({ messages }: MessageRoom) => messages);
+
+// switch to this for the divvy mock api (don't forget to get rid of the "local dev only" code)
+// return fetch("https://api.mocki.io/v1/5ce8b374")
+//   .then((res) => res.json());
+```
+You will still have to keep the mock server running as it builds out the navigation sidebar.
+The links will just all load the mock api data rather than a specific chat room.
+
+Hopefully this is a solid example of my React skills.
+
+Total working time was about 1hr 40 mins which you should be able to see from the commit history.
+
+Calvin
+
+<hr />
+<hr />
+<hr />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
