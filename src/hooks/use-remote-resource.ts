@@ -11,18 +11,25 @@ function useRemoteResource<D>(fn: () => Promise<D>, init: D): [ErrorState, boole
     let didCancel = false;
 
     (async () => {
-      const data = await fn();
-      if (!didCancel) {
-        setData(data);
-        setIsLoading(false);
-        setError(undefined);
+      try {
+        const data = await fn();
+        if (!didCancel) {
+          setData(data);
+          setIsLoading(false);
+          setError(undefined);
+        }
+      } catch (e) {
+        if (!didCancel) {
+          setError(e);
+          setIsLoading(false);
+        }
       }
     })();
 
     return () => {
       didCancel = true;
     }
-  });
+  }, [fn]);
 
   return [error, isLoading, data];
 }
